@@ -9,7 +9,7 @@ def home():
 @app.route('/health')
 def health():
     # Returns 200 OK for the pipeline health check
-    return jsonify(status="healthy"), 200
+    return jsonify(status="unhealthy"), 500
 
 if __name__ == '__main__':
     # Running on 0.0.0.0 to make it accessible inside the container
