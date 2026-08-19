@@ -16,6 +16,6 @@ def test_home(client):
 def test_health(client):
     """Test that health check returns status: healthy."""
     rv = client.get('/health')
-    assert rv.status_code == 404
+    assert rv.status_code == 200
     json_data = rv.get_json()
     assert json_data['status'] == 'healthy'
